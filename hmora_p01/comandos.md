@@ -98,6 +98,7 @@ r
 - `zmore sra_data.fastq.gz`
 
 Output:
+
 \@SRR11241254.1.1 1 length=40
 GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
 +SRR11241254.1.1 1 length=40
@@ -113,7 +114,7 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 
 Respuesta 7: **@** es un candidato para contar las secuencias mediante `zless sra_data.fastq.gz  | grep @ | wc -l`.
 
-Respuesta 8:
+Respuesta 8: `.faa` almacena aminoácdios con código de una letra mientras que `.fasta` almacena secuencias de nucleótidos por lo que es coherente que número de lecturas de este último sea mayor pues una letra en `.faa` equivale a tres letras en `.fasta`.
 
 Respuesta 9: Abrir el archivo con `less sequence.gff3` muestra la línea entera por lo que cuando la cadena sobrepasa el tamaño de la ventana el remanente se muestra como una línea aparte. Por su parte, `less -S sequence.gff3` lidia con este problema añadiendo la capacidad de navegar a través de la línea sin tener que mostrarla aparte.
 

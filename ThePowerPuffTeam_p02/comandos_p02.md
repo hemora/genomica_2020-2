@@ -1,7 +1,7 @@
 # Comandos de la Práctica 02
 ## The Powerpuff Team
 ### Integrante 1: 
-### Integrante 2: 
+### Integrante 2: Pimentel Ruíz Carlos
 ### Integrante 3: Gómez Mora Héctor Eduardo
 
 ## Parte I.

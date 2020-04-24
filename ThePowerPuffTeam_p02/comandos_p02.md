@@ -9,4 +9,3 @@
 02. 
 03. `mkdir -p data/{filtered,raw_data} meta scripts figures archive`
 
-## Parte IV. 

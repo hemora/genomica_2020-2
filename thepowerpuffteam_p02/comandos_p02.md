@@ -14,12 +14,12 @@
 ## Parte III.
 1.
   ~~~bash
-  # Situado en genomica_2020-2
+  # Situado en thepowerpuffteam_p02
   mv ~/Downloads/ERR486827_1.fastq.gz data/raw_data
   mv ~/Downloads/ERR486827_2.fastq.gz data/raw_data
   #
   ln data/raw_data/ERR486827_1.fastq.gz data/filtered/ERR486827_1.fastq.gz
-  # ln data/raw_data/ERR486827_2.fastq.gz data/filtered/ERR486827_2.fastq.gz
+  ln data/raw_data/ERR486827_2.fastq.gz data/filtered/ERR486827_2.fastq.gz
 
   # Descompresión a .fastq
   gunzip -c data/filtered/ERR486827_1.fastq.gz > data/filtered/raw_1.fastq

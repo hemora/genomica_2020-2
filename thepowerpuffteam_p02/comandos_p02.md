@@ -16,7 +16,7 @@
   ~~~bash
   # Situado en genomica_2020-2
   mv ~/Downloads/ERR486827_1.fastq.gz data/raw_data
-  # mv ~/Downloads/ERR486827_2.fastq.gz data/raw_data
+  mv ~/Downloads/ERR486827_2.fastq.gz data/raw_data
   #
   ln data/raw_data/ERR486827_1.fastq.gz data/filtered/ERR486827_1.fastq.gz
   # ln data/raw_data/ERR486827_2.fastq.gz data/filtered/ERR486827_2.fastq.gz

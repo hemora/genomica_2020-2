@@ -44,16 +44,26 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   
 
 2.
+<<<<<<< HEAD
 Ambos archivos tienen la misma cantidad de secuencias:
 
+=======
+  Ambos archivos tienen la misma cantidad de secuencias:
+  ~~~bash
+>>>>>>> b5c753a24f124298093fd861a067399ffd9feb55
   # Cuenta de la cantidad de secuencias en el primer archivo
   wc -l data/filtered/raw_1.fasta # número de líneas incluyendo headers
   expr 797648 / 2 # 398824 secuencias del primer archivo .fasta
 
   #Cuenta de la cantidad de secuencias en el segundo archivo
   wc -l data/filtered/raw_2.fasta # número de líneas incluyendo headers
+<<<<<<< HEAD
   expr 797648 / 2 # 398824 secuencias del primer archivo .fasta
 
+=======
+  expr 797648 / 2 # 398824 secuencias del segundo archivo .fasta
+  ~~~
+>>>>>>> b5c753a24f124298093fd861a067399ffd9feb55
 
   Obtención de la longitud por cada lectura:
 
@@ -61,6 +71,13 @@ Ambos archivos tienen la misma cantidad de secuencias:
   #
   awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.csv
 
+
+  Cálculo de los promedios:
+  ~~~bash
+  awk -F [,] '{total=398824; for(i=1;i<=NF;i++) sum+=$i; print sum/total; sum=0}' data/filtered/lengths_1.csv
+
+  awk -F [,] '{total=398824; for(i=1;i<=NF;i++) sum+=$i; print sum/total; sum=0}' data/filtered/lengths_2.csv
+  ~~~
 
 3. Del siguiente alineamiento
 

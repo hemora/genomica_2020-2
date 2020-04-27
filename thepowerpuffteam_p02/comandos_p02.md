@@ -62,9 +62,11 @@ Las secuencias crudas de Orcinus orca se obtuvieron de https://www.ebi.ac.uk/ena
 Posteriormente las posicionamos en el escritorio donde procedimos a colocar todas las secuencias <fastq.gz> en un mismo directorio llamado <Orcinus_orca_genome>
 
 1. 
-'mv ~/Desktop/ena_files/S*/*.fastq.gz ~/Desktop/ena_files/Orcinus_orca_genome/'
+~~~bash
+mv ~/Desktop/ena_files/S*/*.fastq.gz ~/Desktop/ena_files/Orcinus_orca_genome/
 
  mv ~/Desktop/ena_files/Orcinus_orca_genome/ ~/Desktop/genomica_2020-2/thepowerpuffteam_p02/data/raw_data/
+~~~
 
 2. Se utilizó Ilumina HiSeq 2000. Esta realiza una secuenciación por síntesis basada en terminadores reversibles, presenta una cobertura de ~30x en una sola corrida. 
 

@@ -37,12 +37,18 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   ln data/raw_data/ERR486827_1.fastq.gz data/filtered/ERR486827_1.fastq.gz
   ln data/raw_data/ERR486827_2.fastq.gz data/filtered/ERR486827_2.fastq.gz
 
-  # Descompresión a .fastq
-  gunzip -c data/filtered/ERR486827_1.fastq.gz > data/filtered/raw_1.fastq
-  # awk -F '[ +#/]' '{ gsub(/^@/,">",$0) ; print $1, $3 }' data/filtered/raw_1.fastq > secuencia
+  # Conversión a .fasta
+  gunzip -c data/filtered/ERR486827_1.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_1.fasta
+
+  gunzip -c data/filtered/ERR486827_2.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_2.fasta
   ~~~
 
 2.
+  ~~~bash
+  awk 'NR%2==0{printf length ","}' data/filtered/raw_1.fasta > data/filtered/lengths_1.csv
+  #
+  awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.csv
+  ~~~
 3.
 4.
 
@@ -50,6 +56,7 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 ## Parte IV.
 
 ## Parte V
+
 
 Las secuencias crudas de Orcinus orca se obtuvieron de https://www.ebi.ac.uk/ena/browser/view/PRJNA167475
 Posteriormente las posicionamos en el escritorio donde procedimos a colocar todas las secuencias <fastq.gz> en un mismo directorio llamado <Orcinus_orca_genome>
@@ -60,5 +67,6 @@ Posteriormente las posicionamos en el escritorio donde procedimos a colocar toda
  mv ~/Desktop/ena_files/Orcinus_orca_genome/ ~/Desktop/genomica_2020-2/thepowerpuffteam_p02/data/raw_data/
 
 2. Se utilizó Ilumina HiSeq 2000. Esta realiza una secuenciación por síntesis basada en terminadores reversibles, presenta una cobertura de ~30x en una sola corrida. 
+
 
 

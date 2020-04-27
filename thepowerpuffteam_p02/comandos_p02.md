@@ -22,8 +22,10 @@
   ln data/raw_data/ERR486827_2.fastq.gz data/filtered/ERR486827_2.fastq.gz
 
   # Descompresión a .fastq
-  gunzip -c data/filtered/ERR486827_1.fastq.gz > data/filtered/raw_1.fastq
-  # awk -F '[ +#/]' '{ gsub(/^@/,">",$0) ; print $1, $3 }' data/filtered/raw_1.fastq > secuencia
+  gunzip -c data/filtered/ERR486827_1.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_1.fasta
+
+  gunzip -c data/filtered/ERR486827_2.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_2.fasta
+
   ~~~
 
 2.

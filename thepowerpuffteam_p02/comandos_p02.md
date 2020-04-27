@@ -43,7 +43,8 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   gunzip -c data/filtered/ERR486827_2.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_2.fasta
   ~~~
 
-2. Ambos archivos tienen la misma cantidad de secuencias:
+2.
+Ambos archivos tienen la misma cantidad de secuencias:
   ~~~bash
   # Cuenta de la cantidad de secuencias en el primer archivo
   wc -l data/filtered/raw_1.fasta # número de líneas incluyendo headers
@@ -60,9 +61,30 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   #
   awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.csv
   ~~~
+
 3.
+
 4.
 
+  ~~~bash
+  ln -s genomica_2020/hmora_p01/data/filtered/sequence.gff3 data/filtered/sequence.gff3
+
+  # Número de reportes por categorías
+  awk '{print $3}' data/filtered/sequence.gff3 | sort | uniq -c
+  ~~~  
+
+  De lo cuál se obtiene:
+
+  | #  | categorías      |
+  |----|-----------------|
+  | 2  |                 |
+  | 1  | 1               |
+  | 13 | CDS             |
+  | 1  | five_prime_UTR  |
+  | 11 | gene            |
+  | 1  | region          |
+  | 5  | stem_loop       |
+  | 1  | three_prime_UTR |
 
 ## Parte IV.
 
@@ -72,14 +94,11 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 Las secuencias crudas de Orcinus orca se obtuvieron de https://www.ebi.ac.uk/ena/browser/view/PRJNA167475
 Posteriormente las posicionamos en el escritorio donde procedimos a colocar todas las secuencias `fastq.gz` en un mismo directorio llamado `Orcinus_orca_genome`
 
-1. 
+1.
 ~~~bash
 mv ~/Desktop/ena_files/S*/*.fastq.gz ~/Desktop/ena_files/Orcinus_orca_genome/
 
 mv ~/Desktop/ena_files/Orcinus_orca_genome/ ~/Desktop/genomica_2020-2/thepowerpuffteam_p02/data/raw_data/
 ~~~
 
-2. Se utilizó Ilumina HiSeq 2000. Esta realiza una secuenciación por síntesis basada en terminadores reversibles, presenta una cobertura de ~30x en una sola corrida. 
-
-
-
+2. Se utilizó Ilumina HiSeq 2000. Esta realiza una secuenciación por síntesis basada en terminadores reversibles, presenta una cobertura de ~30x en una sola corrida.

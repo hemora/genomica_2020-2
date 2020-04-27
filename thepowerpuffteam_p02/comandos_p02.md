@@ -125,15 +125,24 @@ mv ~/Desktop/ena_files/Orcinus_orca_genome/ ~/Desktop/genomica_2020-2/thepowerpu
 
 2.
 
- Se utilizó Ilumina HiSeq 2000. Esta realiza una secuenciación por síntesis basada en terminadores reversibles, presenta una cobertura de ~30x en una sola corrida y funciona de la siguiente manera:
+-Se utilizó Ilumina HiSeq 2000. Esta realiza una secuenciación por síntesis basada en terminadores reversibles, presenta una cobertura de ~30x en una sola corrida y funciona de la siguiente manera:
+
 -Se fragmenta el DNA en pedazos de 200 a 600 pares de bases.
+
 -Los fragmentos se unen a secuencias cortas de DNA llamadas adaptadores, posteriormente se incuban en hidróxido de sodio para hacer cadenas sencillas de DNA.
+
 -Estos fragmentos se pasan por una celda de flujo donde son lavados y se unen a primers localizados en la superficie de la celda. El DNA que no pueda parearse es expulsado por el lavado.
+
 -El DNA unido a la celda comienza a replicarse para formar ilustres de DNA con la misma secuencia. Al secuencias cada cluster de DNAs emitida una señal lo suficientemente fuerte para ser detectada por una cámara.
+
 -Se agregan nucleótidos no etiquetados y DNA polimerasa para alongar el DNA, esto forma puentes de DNA de doble cadena entre los primers de la celda.
+
 -Estos puentes se rompen con calor para sólo dejar una cadena y así dejar millones de clusters en la celda.
+
 -Primers y terminadores marcados con fluorescencia son agregados a la celda. Estos últimos son nucleótidos que detienen la síntesis de DNA.
+
 -El primer se une al DNA, seguido va la polimerasa que une los terminadores. Una vez que se agrega un terminador no se puede unir otro.
+
 -Se utilizan láseres para activar la fluorescencia de los terminadores. La cual es detectada por una cámara y registrada en una computadora indicando si es A, C, G, T.
 
 

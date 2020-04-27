@@ -67,7 +67,7 @@ Ambos archivos tienen la misma cantidad de secuencias:
   AGCATGTTAGATTA--GATAGCTGTGCTA
   ------TTAGATAAAGGATA-CTG-----
   ~~~
- su CIGAR string es `6M1I1M2I4M1X3M`.
+  su CIGAR string es `6M1I1M2I4M1X3M`.
 
 4.
 

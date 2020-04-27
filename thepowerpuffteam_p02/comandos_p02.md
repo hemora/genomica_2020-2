@@ -45,9 +45,9 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 
 2.
   ~~~bash
-  awk 'NR%2==0{printf length ","}' data/filtered/raw_1.fasta > data/filtered/lengths_1.txt
+  awk 'NR%2==0{printf length ","}' data/filtered/raw_1.fasta > data/filtered/lengths_1.csv
   #
-  awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.txt
+  awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.csv
   ~~~
 3.
 4.

@@ -59,7 +59,7 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 
 
 Las secuencias crudas de Orcinus orca se obtuvieron de https://www.ebi.ac.uk/ena/browser/view/PRJNA167475
-Posteriormente las posicionamos en el escritorio donde procedimos a colocar todas las secuencias <fastq.gz> en un mismo directorio llamado <Orcinus_orca_genome>
+Posteriormente las posicionamos en el escritorio donde procedimos a colocar todas las secuencias `fastq.gz` en un mismo directorio llamado `Orcinus_orca_genome`
 
 1. 
 ~~~bash

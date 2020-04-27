@@ -62,9 +62,11 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.csv
   ~~~
 
-  Cálculo del promedio:
+  Cálculo de los promedios:
   ~~~bash
   awk -F [,] '{total=398824; for(i=1;i<=NF;i++) sum+=$i; print sum/total; sum=0}' data/filtered/lengths_1.csv
+
+  awk -F [,] '{total=398824; for(i=1;i<=NF;i++) sum+=$i; print sum/total; sum=0}' data/filtered/lengths_2.csv
   ~~~
 
 3. Del siguiente alineamiento

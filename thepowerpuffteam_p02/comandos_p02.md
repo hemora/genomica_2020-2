@@ -6,7 +6,8 @@
 
 ## Parte I.
 01. `mkdir thepowerpuffteam_p02`
-
+02.	\
+03.	\
 04. `mkdir -p data/{filtered,raw_data} meta scripts figures archive`
 
 ## Parte II.

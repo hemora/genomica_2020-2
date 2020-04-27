@@ -52,7 +52,7 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 
   #Cuenta de la cantidad de secuencias en el segundo archivo
   wc -l data/filtered/raw_2.fasta # número de líneas incluyendo headers
-  expr 797648 / 2 # 398824 secuencias del primer archivo .fasta
+  expr 797648 / 2 # 398824 secuencias del segundo archivo .fasta
   ~~~
 
   Obtención de la longitud por cada lectura:

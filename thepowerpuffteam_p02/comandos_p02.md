@@ -43,7 +43,18 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   gunzip -c data/filtered/ERR486827_2.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_2.fasta
   ~~~
 
-2.
+2. Ambos archivos tienen la misma cantidad de secuencias:
+  ~~~bash
+  # Cuenta de la cantidad de secuencias en el primer archivo
+  wc -l data/filtered/raw_1.fasta # número de líneas incluyendo headers
+  expr 797648 / 2 # 398824 secuencias del primer archivo .fasta
+
+  #Cuenta de la cantidad de secuencias en el segundo archivo
+  wc -l data/filtered/raw_2.fasta # número de líneas incluyendo headers
+  expr 797648 / 2 # 398824 secuencias del primer archivo .fasta
+  ~~~
+
+  Obtención de la longitud por cada lectura:
   ~~~bash
   awk 'NR%2==0{printf length ","}' data/filtered/raw_1.fasta > data/filtered/lengths_1.csv
   #

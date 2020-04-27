@@ -62,7 +62,12 @@ Ambos archivos tienen la misma cantidad de secuencias:
   awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.csv
   ~~~
 
-3.
+3. Del siguiente alineamiento
+  ~~~
+  AGCATGTTAGATTA--GATAGCTGTGCTA
+  ------TTAGATAAAGGATA-CTG-----
+  ~~~
+ su CIGAR string es `6M1I1M2I4M1X3M`.
 
 4.
 

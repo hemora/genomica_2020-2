@@ -6,8 +6,8 @@
 
 ## Parte I.
 01. `mkdir thepowerpuffteam_p02`
-02.
-03. `mkdir -p data/{filtered,raw_data} meta scripts figures archive`
+
+04. `mkdir -p data/{filtered,raw_data} meta scripts figures archive`
 
 ## Parte II.
 
@@ -47,3 +47,7 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 
 
 ## Parte IV.
+
+## Parte V
+
+

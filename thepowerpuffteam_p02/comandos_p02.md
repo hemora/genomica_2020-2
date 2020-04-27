@@ -65,7 +65,7 @@ Posteriormente las posicionamos en el escritorio donde procedimos a colocar toda
 ~~~bash
 mv ~/Desktop/ena_files/S*/*.fastq.gz ~/Desktop/ena_files/Orcinus_orca_genome/
 
- mv ~/Desktop/ena_files/Orcinus_orca_genome/ ~/Desktop/genomica_2020-2/thepowerpuffteam_p02/data/raw_data/
+mv ~/Desktop/ena_files/Orcinus_orca_genome/ ~/Desktop/genomica_2020-2/thepowerpuffteam_p02/data/raw_data/
 ~~~
 
 2. Se utilizó Ilumina HiSeq 2000. Esta realiza una secuenciación por síntesis basada en terminadores reversibles, presenta una cobertura de ~30x en una sola corrida. 

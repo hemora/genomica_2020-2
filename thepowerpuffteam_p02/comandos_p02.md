@@ -106,7 +106,7 @@ Ambos archivos tienen la misma cantidad de secuencias:
 
 2. `./fastqc_run.sh`
 
-3. 
+3.
 
 ## Parte V
 
@@ -115,11 +115,11 @@ Las secuencias crudas de Orcinus orca se obtuvieron de https://www.ebi.ac.uk/ena
 Posteriormente las posicionamos en el escritorio donde procedimos a colocar todas las secuencias `fastq.gz` en un mismo directorio llamado `Orcinus_orca_genome`
 
 1.
-
+~~~bash
 mv ~/Desktop/ena_files/S*/*.fastq.gz ~/Desktop/ena_files/Orcinus_orca_genome/
 
 mv ~/Desktop/ena_files/Orcinus_orca_genome/ ~/Desktop/genomica_2020-2/thepowerpuffteam_p02/data/raw_data/
-
+~~~
 
 2.
 

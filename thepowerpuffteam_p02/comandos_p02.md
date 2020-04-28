@@ -1,8 +1,8 @@
 # Comandos de la Práctica 02
 ## The Powerpuff Team
-### Integrante 1: Abasolo Cortés Natalia
-### Integrante 2: Pimentel Ruíz Carlos
-### Integrante 3: Gómez Mora Héctor Eduardo
+### Integrante 1: Abasolo Cortés Natalia 🍬
+### Integrante 2: Pimentel Ruíz Carlos 🌰
+### Integrante 3: Gómez Mora Héctor Eduardo 🔵
 
 ## Parte I.
 01. `mkdir thepowerpuffteam_p02`

@@ -29,7 +29,7 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 
 ## Parte III.
 1.
-  
+
   # Situado en thepowerpuffteam_p02
   mv ~/Downloads/ERR486827_1.fastq.gz data/raw_data
   mv ~/Downloads/ERR486827_2.fastq.gz data/raw_data
@@ -41,36 +41,28 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   gunzip -c data/filtered/ERR486827_1.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_1.fasta
 
   gunzip -c data/filtered/ERR486827_2.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_2.fasta
-  
+
 
 2.
-<<<<<<< HEAD
 Ambos archivos tienen la misma cantidad de secuencias:
-
-=======
-  Ambos archivos tienen la misma cantidad de secuencias:
   ~~~bash
->>>>>>> b5c753a24f124298093fd861a067399ffd9feb55
   # Cuenta de la cantidad de secuencias en el primer archivo
   wc -l data/filtered/raw_1.fasta # número de líneas incluyendo headers
   expr 797648 / 2 # 398824 secuencias del primer archivo .fasta
 
   #Cuenta de la cantidad de secuencias en el segundo archivo
   wc -l data/filtered/raw_2.fasta # número de líneas incluyendo headers
-<<<<<<< HEAD
   expr 797648 / 2 # 398824 secuencias del primer archivo .fasta
-
-=======
   expr 797648 / 2 # 398824 secuencias del segundo archivo .fasta
   ~~~
->>>>>>> b5c753a24f124298093fd861a067399ffd9feb55
 
   Obtención de la longitud por cada lectura:
 
+  ~~~bash
   awk 'NR%2==0{printf length ","}' data/filtered/raw_1.fasta > data/filtered/lengths_1.csv
   #
   awk 'NR%2==0{printf length ","}' data/filtered/raw_2.fasta > data/filtered/lengths_2.csv
-
+  ~~~
 
   Cálculo de los promedios:
   ~~~bash
@@ -81,19 +73,19 @@ Ambos archivos tienen la misma cantidad de secuencias:
 
 3. Del siguiente alineamiento
 
+  ~~~
   AGCATGTTAGATTA--GATAGCTGTGCTA
   ------TTAGATAAAGGATA-CTG-----
-
+  ~~~
   su CIGAR string es `6M1I1M2I4M1X3M`.
 
 4.
-
-
+  ~~~bash
   ln -s genomica_2020/hmora_p01/data/filtered/sequence.gff3 data/filtered/sequence.gff3
 
   # Número de reportes por categorías
   awk '{print $3}' data/filtered/sequence.gff3 | sort | uniq -c
-
+  ~~~
 
   De lo cuál se obtiene:
 
@@ -109,6 +101,12 @@ Ambos archivos tienen la misma cantidad de secuencias:
   | 1  | three_prime_UTR |
 
 ## Parte IV.
+
+1. `mkdir bin`
+
+2. `./fastqc_run.sh`
+
+3. 
 
 ## Parte V
 

@@ -29,7 +29,7 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
 
 ## Parte III.
 1.
-
+  ~~~bash
   # Situado en thepowerpuffteam_p02
   mv ~/Downloads/ERR486827_1.fastq.gz data/raw_data
   mv ~/Downloads/ERR486827_2.fastq.gz data/raw_data
@@ -41,7 +41,7 @@ Fuente: Kulski, J., 2016. Next-Generation Sequencing — An Overview of the Hist
   gunzip -c data/filtered/ERR486827_1.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_1.fasta
 
   gunzip -c data/filtered/ERR486827_2.fastq.gz | awk 'NR%4==1{print ">" $0} NR%4==2{print}' > data/filtered/raw_2.fasta
-
+  ~~~
 
 2.
 Ambos archivos tienen la misma cantidad de secuencias:

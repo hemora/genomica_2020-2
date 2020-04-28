@@ -104,7 +104,11 @@ Ambos archivos tienen la misma cantidad de secuencias:
 
 1. `mkdir bin`
 
-2. `./fastqc_run.sh`
+2.
+  ~~~bash
+  cd scripts
+  ./fastqc_run.sh
+  ~~~
 
 3.
 

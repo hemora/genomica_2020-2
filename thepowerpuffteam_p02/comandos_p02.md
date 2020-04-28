@@ -102,45 +102,32 @@ Ambos archivos tienen la misma cantidad de secuencias:
 
 ## Parte IV.
 
-<<<<<<< HEAD
-1. # Crea un directorio llamado bin/
-Natt@NattAC /cygdrive/c/Users/Natt/Desktop/Powerpuff_team/genomica_2020-2/thepowerpuffteam_p02
-$ mkdir bin/
+1. 
+~~~bash
+# Crea directorio bin
+mkdir bin
 # Descomprime el archivo FASTQC
-Natt@NattAC /cygdrive/c/Users/Natt/Desktop
-$ gunzip fastqc_v0.11.9.zip
+gunzip fastqc_v0.11.9.zip
 # Le da permisos de ejecución al archivo fastqc
-Natt@NattAC /cygdrive/c/Users/Natt/Desktop/fastqc_v0.11.9/FASTQC
-$ chmod u+x run_fastqc.bat
-
-2. # Moverse a la carpeta filtered/
-Natt@NattAC /cygdrive/c/Users/Natt/Desktop/Powerpuff_team/genomica_2020-2/thepowerpuffteam_p02
-$ cd data/filtered/
+chmod u+x run_fastqc.bat
+~~~
+2. 
+~~~bash
 # Crear un aschivo bash
-Natt@NattAC /cygdrive/c/Users/Natt/Desktop/Powerpuff_team/genomica_2020-2/thepowerpuffteam_p02/bin
-$ touch fastqc_run.sh
+touch scripts/fastqc_run.sh
+# Una vez escrito el programa
+cd scripts
+./fastqc_run.sh
+~~~
 
-3. #Obtener el html
-# Análisis de las gráficas 
-En nuestro primer archivo, ERR486827_1.fastq, podemos observar un espectro de calidad, que se denota por las cajas que se muestran en la gráfica, donde en el eje de las 'x' muestran los pares de base (bp en inglés) que empiezan del 1-9 y luego van incrementando en número los conjuntos. El eje 'y' muestra la calidad (puntaje de 0-40 en Ilumina 1.9) y, regresando a la gráfica, tenemos que la mayoría de nuestros pares de bases tienen puntaje arriba de 30, e inclusive varían solamente entre 38 y 40 de score, que es considerado el nivel de mejor calidad.
+3. En nuestro primer archivo, ERR486827_1.fastq, podemos observar un espectro de calidad, que se denota por las cajas que se muestran en la gráfica, donde en el eje de las 'x' muestran los pares de base (bp en inglés) que empiezan del 1-9 y luego van incrementando en número los conjuntos. El eje 'y' muestra la calidad (puntaje de 0-40 en Ilumina 1.9) y, regresando a la gráfica, tenemos que la mayoría de nuestros pares de bases tienen puntaje arriba de 30, e inclusive varían solamente entre 38 y 40 de score, que es considerado el nivel de mejor calidad.
 En nuestro segundo archivo, ERR486827_2.fastq, tenemos que nuestra gráfica, con las mismas características que la anterior, ya tienen una pequeña variación ya que en los primeros pares de bases su calidad es menor con un amplio espectro entre 30 y 34. Por consiguiente, en el resto de la secuencia se denota ya una variación que abarca casi todo el espectro entre 36-40 de score, sin embargo sigue arriba de 30, por lo que la calidad de la secuencia es bastante considerable.
-# Covertura del genoma
-Dado que:
-covertura = ((cantidad de lecturas)(longitud de lectura))/ total de tamaño del genoma (bp)
 
+4. Dado que: covertura = ((cantidad de lecturas)(longitud de lectura))/ total de tamaño del genoma (bp)
+~~~
 ERR486827_1.fastq  ((150)x(5x10^9))/150 = 5,000,000,000
 ERR486827_1.fastq  ((150)x(5x10^9))/150 = 5,000,000,000
-=======
-1. `mkdir bin`
-
-2.
-  ~~~bash
-  cd scripts
-  ./fastqc_run.sh
-  ~~~
-
-3.
->>>>>>> ac107239744dab7f4d698286874f60647461cdde
+~~~
 
 ## Parte V
 
